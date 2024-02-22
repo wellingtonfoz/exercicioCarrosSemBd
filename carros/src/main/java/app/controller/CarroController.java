@@ -45,7 +45,7 @@ public class CarroController {
 		
 		try {
 			
-			String mensagem = this.carroService.update(carro);
+			String mensagem = this.carroService.update(id, carro);
 			return new ResponseEntity<String>(mensagem, HttpStatus.CREATED);
 			
 		} catch (Exception e) {

@@ -16,13 +16,13 @@ public class CarroService {
 		return carro.getNome()+ " salvo com sucesso";
 	}
 
-	public String update(Carro carro) {
+	public String update(long id, Carro carro) {
 		
 		lista = this.listAll();
 
 		if(lista != null)
 			for(int i=0; i<lista.size(); i++) {
-				if(lista.get(i).getId() == carro.getId()) {
+				if(lista.get(i).getId() == id) {
 					lista.set(i, carro);
 					return carro.getNome()+ " alterado com sucesso";
 				}
